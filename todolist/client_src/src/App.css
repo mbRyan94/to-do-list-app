@@ -1,0 +1,14 @@
+html, body {
+    /*background-color: #E8E8EE;*/
+    height: 1200px;
+    background: linear-gradient(to bottom right,#66a6ff, #89f7fe);
+}
+
+.checked-btn {
+    width: 70%;
+    margin: 0 auto;   
+}
+
+.btn {
+    background-color: #FF6347;
+}

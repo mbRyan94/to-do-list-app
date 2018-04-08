@@ -1,0 +1,40 @@
+.listitem {
+    width: 95%;
+    height: 50px;
+    margin: 0.5% auto;
+    border: 0.5px solid lightgray;
+    border-radius: 4px;
+   
+}
+
+.listitem:hover {
+    box-shadow: 0.5px 1px 5px;
+}
+
+
+
+.item-inner {
+    padding-left: 5%;
+    
+}
+
+
+
+.item-inner p form {
+    display: inline-block;
+    float: left;
+    
+}
+
+.title {
+    padding-left: 5%;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+}
+
+.date {
+   float: right;
+   padding-right: 5%; 
+   margin-top: 0;
+}

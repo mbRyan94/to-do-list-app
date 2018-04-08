@@ -1,0 +1,11 @@
+.closed-section {
+    width: 70%;
+    height: auto;
+    background-color: gray;
+    border-radius: 4px;
+    margin: 0 auto;
+    padding: 1% 0;
+    margin-top: 5%;
+    color: white;
+}
+
