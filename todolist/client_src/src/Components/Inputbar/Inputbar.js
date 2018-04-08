@@ -5,14 +5,13 @@ class Inputbar extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state={
-            term: ""
-        };
+        this.state={term: ''}
         this.handleTermChange = this.handleTermChange.bind(this);
         this.addItem = this.addItem.bind(this);
     }
 
     handleTermChange(event) {
+        console.log(this.state.term);
         this.setState({term: event.target.value}); 
     }
 
@@ -27,7 +26,7 @@ class Inputbar extends React.Component {
                     <h2>Enter your next task</h2>
                     <div className="input-submit">
                         <input onChange={this.handleTermChange} className="input" type="text" placeholder="E.g. Learn React" />
-                        <a onClick={this.props.get} add={this.addItem} className="btn-large waves-light waves-effects"><i className="fa fa-arrow-circle-right"></i></a>
+                        <a get={this.props.get} onClick={this.addItem} className="btn-large waves-light waves-effects"><i className="fa fa-arrow-circle-right"></i></a>
                     </div>
                     
                     </div>

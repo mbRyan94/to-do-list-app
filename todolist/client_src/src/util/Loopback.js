@@ -1,9 +1,9 @@
-
+const endpoint = 'http://localhost:3000/api/todos';
 
 
 const Loopback = {
     displayItems() {
-        return fetch('http://localhost:3000/api/todos').then(response => {
+        return fetch(endpoint).then(response => {
             return response.json();
         }).then(jsonResponse =>{
             if (!jsonResponse) {
@@ -16,6 +16,19 @@ const Loopback = {
                 description: todo.description,
                 date: todo.date
             }))
+        })
+    },
+
+    addItems(term) {
+        return fetch(endpoint, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({title: term})
+        }).then(response => {
+            console.log(response);
+            return response.json();
         })
     }
 };

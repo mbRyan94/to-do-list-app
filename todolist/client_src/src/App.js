@@ -15,6 +15,7 @@ class App extends Component {
     };
     this.showClosedSection = this.showClosedSection.bind(this);
     this.getList = this.getList.bind(this);
+    this.addToList = this.addToList.bind(this);
   }
 
 showClosedSection() {
@@ -33,9 +34,15 @@ getList() {
  
   Loopback.displayItems().then(todo => {
     this.setState({listItems: todo});
-  })
-  
+  });
 }
+
+addToList(term) {
+  Loopback.addItems(term).then(this.getList())
+}
+
+
+
 
 addToCheckedSection() {
 
