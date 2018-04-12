@@ -41,7 +41,9 @@ addToList(term) {
   Loopback.addItems(term).then(this.getList())
 }
 
-
+componentDidMount() {
+  this.addToList();
+}
 
 
 addToCheckedSection() {
